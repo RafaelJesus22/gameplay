@@ -10,8 +10,23 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: colors.bg,
   },
-  image: {},
-  content: {},
-  title: {},
-  subTitle: {},
+  image: {
+    width: '100%',
+    height: 360,
+  },
+  content: {
+    marginTop: -40
+  },
+  title: {
+    color: colors.headding,
+    textAlign: 'center',
+    fontSize: 40,
+    marginBottom: 16,
+  },
+  subTitle: {
+    textAlign: 'center',
+    color: colors.headding,
+    fontSize: 16,
+    marginBottom: 64,
+  },
 })
