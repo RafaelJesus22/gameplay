@@ -1,4 +1,6 @@
 import React from 'react';
+import { StatusBar } from 'react-native';
+
 import { useFonts } from 'expo-font';
 import { 
   Inter_400Regular, 
@@ -24,6 +26,13 @@ export default function App() {
   if (!fontsDidLoad) return <AppLoading />;
 
   return (
-    <SingIn />
+    <>
+      <SingIn />
+      <StatusBar 
+        barStyle="light-content"
+        backgroundColor="#0000" 
+        translucent
+      />
+    </>
   );
 }
