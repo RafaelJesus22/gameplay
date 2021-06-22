@@ -13,6 +13,7 @@ import {
 
 import AppLoading from 'expo-app-loading';
 import { SingIn } from './src/Screens/SingIn/Index';
+import { Background } from './src/components/background/index';
 
 export default function App() {
 
@@ -26,13 +27,13 @@ export default function App() {
   if (!fontsDidLoad) return <AppLoading />;
 
   return (
-    <>
-      <SingIn />
+    <Background>
       <StatusBar 
         barStyle="light-content"
         backgroundColor="#0000" 
         translucent
       />
-    </>
+      <SingIn />
+    </Background>
   );
 }

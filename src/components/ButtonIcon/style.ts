@@ -1,7 +1,7 @@
-import { SegmentedControlIOSComponent, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/theme'
 
-const { colors } = theme;
+const { colors, fonts } = theme;
 
 export const styles = StyleSheet.create({
   container: {
@@ -29,5 +29,6 @@ export const styles = StyleSheet.create({
     color: colors.heading,
     fontSize: 15,
     textAlign: 'center',
+    fontFamily: fonts.title700,
   },
 })
