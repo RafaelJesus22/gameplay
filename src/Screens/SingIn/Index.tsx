@@ -14,8 +14,8 @@ export function SingIn() {
   return (
     <View style={styles.container}>
       <StatusBar 
-        barStyle="light-content" 
-        backgroundColor="transparent" 
+        barStyle="light-content"
+        backgroundColor="#0000" 
         translucent
       />
       <Image 
@@ -26,9 +26,9 @@ export function SingIn() {
 
       <View style={styles.content}>
         <Text style={styles.title}>
-          Organize{'\n'}
-          suas jogatinas{'\n'}
-          facilmente
+          Conecte-se{'\n'}
+          e organize{'\n'}
+          suas jogatinas
         </Text>
 
         <Text style={styles.subTitle}>
