@@ -6,13 +6,18 @@ import {
   StatusBar
 } from 'react-native';
 import { styles } from './styles';
+import { ButtonIcon } from '../../components/ButtonIcon';
 
 import IllustrationImg from '../../assets/illustration.png';
 
 export function SingIn() {
   return (
     <View style={styles.container}>
-      <StatusBar barStyle="light-content" backgroundColor="tranparent" translucent/>
+      <StatusBar 
+        barStyle="light-content" 
+        backgroundColor="transparent" 
+        translucent
+      />
       <Image 
         source={IllustrationImg}
         style={styles.image}
@@ -30,8 +35,11 @@ export function SingIn() {
           Crie grupos para jogar seus games {'\n'}
           favoritos com seus amigos
         </Text>
+        <ButtonIcon 
+          title='Entrar com discord'
+          activeOpacity={0.75}
+        />
       </View>
-
     </View>
   );
 }
