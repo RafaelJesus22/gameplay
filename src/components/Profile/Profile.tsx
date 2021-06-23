@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 
 import { styles } from './style';
-import { Avatar } from '../Avatar/index';
+import { Avatar } from '../Avatar/Avatar';
 
 export const Profile = () => {
   return (

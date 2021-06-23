@@ -5,7 +5,7 @@ import {
   Image, 
 } from 'react-native';
 import { styles } from './styles';
-import { ButtonIcon } from '../../components/ButtonIcon';
+import { ButtonIcon } from '../../components/ButtonIcon/ButtonIcon';
 
 import IllustrationImg from '../../assets/illustration.png';
 import { useNavigation } from '@react-navigation/native';
