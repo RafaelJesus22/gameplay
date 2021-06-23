@@ -1,11 +1,16 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
+import { Category } from '../Category/Category';
 
 import { styles } from './style';
-import { theme } from '../../global/styles/theme';
+import { categories } from '../../utils/categories';
 
-export const CategorySelect = () => {
+interface Props {
+  categorySelected: number;
+}
 
+export const CategorySelect = (props: Props) => {
+  const { categorySelected } = props;
 
   return (
     <ScrollView 
@@ -14,7 +19,18 @@ export const CategorySelect = () => {
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={{ paddingRight: 40 }}
     >
-      {}
+      {
+        categories.map(category => (
+          <Category 
+            key={category.id}
+            icon={category.icon}
+            title={category.title}
+            checked={category.id === categorySelected }
+          />
+        )
+
+        )
+      }
     </ScrollView>
       
   );
