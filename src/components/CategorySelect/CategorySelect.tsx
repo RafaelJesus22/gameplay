@@ -6,11 +6,12 @@ import { styles } from './style';
 import { categories, CategoryProps } from '../../utils/categories';
 
 interface Props {
-  categorySelected: number;
+  categorySelected: string;
+  setCategory: (categoryId: string) => void;
 }
 
 export const CategorySelect = (props: Props) => {
-  const { categorySelected } = props;
+  const { categorySelected, setCategory } = props;
 
   return (
     <FlatList 
@@ -25,6 +26,7 @@ export const CategorySelect = (props: Props) => {
           icon={item.icon}
           title={item.title}
           checked={item.id === categorySelected }
+          onPress={() => setCategory(item.id)}
         />
       )}
     />
