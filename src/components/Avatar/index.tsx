@@ -11,13 +11,13 @@ interface Props {
 
 export const Avatar = ({ imageUrl }: Props) => {
 
-  const { secondary80, secondary100, } = theme.colors;
+  const { secondary50, secondary70, } = theme.colors;
 
   return (
     <LinearGradient 
       colors={[
-        secondary80,
-        secondary100,
+        secondary50,
+        secondary70,
       ]}
       style={styles.container}
     >
