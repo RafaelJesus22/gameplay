@@ -12,7 +12,7 @@ import {
 } from '@expo-google-fonts/rajdhani';
 
 import AppLoading from 'expo-app-loading';
-import { Home } from './src/Screens/Home/index';
+import { Routes } from './src/routes/index';
 import { Background } from './src/components/background/index';
 
 export default function App() {
@@ -33,7 +33,7 @@ export default function App() {
         backgroundColor="#0000" 
         translucent
       />
-      <Home />
+      <Routes />
     </Background>
   );
 }
