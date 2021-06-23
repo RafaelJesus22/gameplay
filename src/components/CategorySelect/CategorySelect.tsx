@@ -1,9 +1,9 @@
 import React from 'react';
-import { ScrollView } from 'react-native';
+import { ScrollView, FlatList } from 'react-native';
 import { Category } from '../Category/Category';
 
 import { styles } from './style';
-import { categories } from '../../utils/categories';
+import { categories, CategoryProps } from '../../utils/categories';
 
 interface Props {
   categorySelected: number;
@@ -13,25 +13,20 @@ export const CategorySelect = (props: Props) => {
   const { categorySelected } = props;
 
   return (
-    <ScrollView 
-      style={styles.container}
+    <FlatList 
+      data={categories}
+      contentContainerStyle={{ paddingRight: 24, paddingLeft: 24 }}
       horizontal
       showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{ paddingRight: 40 }}
-    >
-      {
-        categories.map(category => (
-          <Category 
-            key={category.id}
-            icon={category.icon}
-            title={category.title}
-            checked={category.id === categorySelected }
-          />
-        )
-
-        )
-      }
-    </ScrollView>
-      
+      keyExtractor={ item => item.id.toString() }
+      renderItem={({ item }) => (
+        <Category 
+          key={item.id}
+          icon={item.icon}
+          title={item.title}
+          checked={item.id === categorySelected }
+        />
+      )}
+    />
   );
 }
