@@ -1,17 +1,17 @@
 import React from 'react';
-import { ScrollView, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import { Category } from '../Category/Category';
 
-import { styles } from './style';
-import { categories, CategoryProps } from '../../utils/categories';
+import { categories } from '../../utils/categories';
 
 interface Props {
   categorySelected: string;
   setCategory: (categoryId: string) => void;
+  hasCheckBox?: boolean;
 }
 
 export const CategorySelect = (props: Props) => {
-  const { categorySelected, setCategory } = props;
+  const { categorySelected, setCategory, hasCheckBox } = props;
 
   return (
     <FlatList 
@@ -27,6 +27,7 @@ export const CategorySelect = (props: Props) => {
           title={item.title}
           checked={item.id === categorySelected }
           onPress={() => setCategory(item.id)}
+          hasCheckBox={hasCheckBox}
         />
       )}
     />

@@ -48,7 +48,7 @@ export const Category = (props: Props) => {
           ]}
         >
           {
-            !hasCheckBox && 
+            hasCheckBox && 
             <View style={checked ? styles.checked : styles.check} />
           }
 

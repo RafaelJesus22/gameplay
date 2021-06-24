@@ -7,6 +7,7 @@ import { CategorySelect } from '../../components/CategorySelect/CategorySelect';
 import { ListHeader } from '../../components/ListHeader/ListHeader';
 import { Appointment } from '../../components/Appointment/Appointment';
 import { ListDivider } from '../../components/ListDivider';
+import { Background } from '../../components/BackGround';
 import { styles } from './styles';
 
 
@@ -45,7 +46,7 @@ export function Home() {
   }
 
   return (
-    <View style={styles.container}>
+    <Background>
       
       <View style={styles.header}>
         <Profile />
@@ -79,6 +80,6 @@ export function Home() {
         </View>
       </View>
 
-    </View>
+    </Background>
   );
 }
