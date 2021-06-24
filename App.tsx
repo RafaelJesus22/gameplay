@@ -13,7 +13,7 @@ import {
 
 import AppLoading from 'expo-app-loading';
 import { Routes } from './src/routes/index';
-import { Background } from './src/components/background/BackGround';
+import { Background } from './src/components/BackGround';
 
 export default function App() {
 
