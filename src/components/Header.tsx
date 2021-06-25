@@ -9,6 +9,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Feather } from '@expo/vector-icons';
 import { theme } from '../global/styles/theme';
+import { useNavigation } from '@react-navigation/native';
 
 
 interface Props {
@@ -16,16 +17,23 @@ interface Props {
   action?: ReactNode
 }
 
-export const AppointmentDetails = (props: Props) => {
+export const Header = (props: Props) => {
   const { title, action } = props;
   const { secondary100, secondary40, heading } = theme.colors;
+  const navigation = useNavigation()
+
+  const handleGoBack = () => {
+    navigation.goBack();
+  }
 
   return (
     <LinearGradient
       colors={[secondary100, secondary40]}
       style={styles.container}
     >
-      <BorderlessButton>
+      <BorderlessButton
+        onPress={handleGoBack}
+      >
         <Feather
           name='arrow-left'
           size={24}
