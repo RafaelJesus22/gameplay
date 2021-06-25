@@ -1,21 +1,15 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { SvgProps } from 'react-native-svg'
-import { RectButton, RectButtonProps } from 'react-native-gesture-handler';
+
+import { RectButton } from 'react-native-gesture-handler';
 import { LinearGradient } from 'expo-linear-gradient';
 
-
+import { CategoryProps } from '../../types/types';
 import { styles } from './style';
 import { theme } from '../../global/styles/theme';
 
-interface Props extends RectButtonProps{
-  title: string;
-  icon: React.FC<SvgProps>;
-  checked?: boolean;
-  hasCheckBox?: boolean;
-}
 
-export const Category = (props: Props) => {
+export const Category = (props: CategoryProps) => {
   const { 
     title, 
     checked, 

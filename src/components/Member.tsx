@@ -1,15 +1,8 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
 import { theme } from '../global/styles/theme';
-
+import { MemberProps } from '../types/types';
 import { Avatar } from './Avatar'
-
-export interface MemberProps {
-  id: string;
-  userName: string;
-  avatar_url: string;
-  status: string;
-}
 
 interface Props {
  data: MemberProps;

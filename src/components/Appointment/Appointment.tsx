@@ -9,21 +9,7 @@ import { GuildIcon } from '../GuildIcon';
 import { styles } from './style';
 import { categories } from '../../utils/categories';
 import { theme } from '../../global/styles/theme';
-
-export interface GuildProps {
-  id: string;
-  owner: boolean;
-  name: string;
-  icon: null;
-}
-
-export interface AppointmentProps {
-  id: string;
-  guild: GuildProps;
-  category: string;
-  description: string;
-  date: string;
-}
+import { AppointmentProps } from '../../types/types'
 
 interface Props extends RectButtonProps {
   data: AppointmentProps;
