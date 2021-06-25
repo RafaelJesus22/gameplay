@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import { theme } from '../../global/styles/theme';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
 const { colors, fonts } = theme;
 
@@ -29,5 +30,10 @@ export const styles = StyleSheet.create({
   member: {
     marginLeft: 24,
     marginTop: 27,
-  }
+  },
+  footer: {
+    paddingHorizontal: 24,
+    paddingVertical: 20,
+    marginBottom: getBottomSpace(),
+  },
 });

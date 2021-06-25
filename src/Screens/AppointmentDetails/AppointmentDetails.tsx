@@ -7,6 +7,7 @@ import { Header } from '../../components/Header';
 import { Member } from '../../components/Member';
 import { ListDivider } from '../../components/ListDivider';
 import { ListHeader } from '../../components/ListHeader/ListHeader';
+import { ButtonIcon } from '../../components/ButtonIcon/ButtonIcon';
 import { theme } from '../../global/styles/theme';
 
 import BannerImg from '../../assets/banner.png'
@@ -74,6 +75,12 @@ export const AppointmentDetails = () => {
           />
         )}
       />
+
+      <View style={styles.footer}>
+        <ButtonIcon
+          title='Entrar na partida'
+        />
+      </View>
     </Background>
   );
 }
